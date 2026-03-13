@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhotoRate</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>PhotoRate</h2>
+
+<div>
+<a href="#">Home</a>
+<a href="#gallery">Gallery</a>
+<a href="login.html">Logout</a>
+
+<span class="toggle" onclick="toggleDarkMode()">🌙</span>
+</div>
+
+</nav>
+
+<div class="hero">
+
+<h1 id="welcome">Welcome</h1>
+<p>Rate my photography ⭐</p>
+
+</div>
+
+
+<h2 style="text-align:center;margin-top:40px;">Photo Gallery</h2>
+
+<div class="gallery" id="galleryContainer">
+
+<div class="card">
+
+<img src="river.jpeg">
+
+<h3>River</h3>
+
+<div class="rating" data-photo="River">
+
+<input type="radio" name="r1" id="r15"><label for="r15">★</label>
+<input type="radio" name="r1" id="r14"><label for="r14">★</label>
+<input type="radio" name="r1" id="r13"><label for="r13">★</label>
+<input type="radio" name="r1" id="r12"><label for="r12">★</label>
+<input type="radio" name="r1" id="r11"><label for="r11">★</label>
+
+</div>
+
+<p class="avg">Average Rating: 0</p>
+
+<div>
+<span class="like" onclick="likePhoto(this)">❤️</span>
+</div>
+
+<div>
+<input type="text" class="commentInput">
+<button onclick="addComment(this)">Post</button>
+<ul class="commentList"></ul>
+</div>
+
+</div>
+
+</div>
+
+
+<div id="topPhoto">Top Rated Photo: None</div>
+
+
+<h2 style="text-align:center;">Photography Information</h2>
+
+<table>
+
+<tr>
+<th>Photo</th>
+<th>Location</th>
+<th>Camera</th>
+<th>Resolution</th>
+</tr>
+
+<tr>
+<td>River</td>
+<td>India</td>
+<td>Canon</td>
+<td>4K</td>
+</tr>
+
+<tr>
+<td>Forest</td>
+<td>Amazon</td>
+<td>Nikon</td>
+<td>1080p</td>
+</tr>
+
+<tr>
+<td>Mountains</td>
+<td>Himalayas</td>
+<td>Sony</td>
+<td>4K</td>
+</tr>
+
+</table>
+
+
+<div class="upload-box">
+
+<h3>Upload Your Photo</h3>
+
+<input type="file" id="uploadPhoto">
+<button onclick="uploadImage()">Upload</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

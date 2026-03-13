@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhotoRate Login</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff7e5f,#feb47b);
+}
+
+.login-box{
+background:white;
+padding:40px;
+width:320px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+h2{
+color:#444;
+}
+v
+input{
+width:100%;
+padding:10px;
+margin:10px 0;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button{
+width:100%;
+padding:10px;
+background:#ff7e5f;
+border:none;
+color:white;
+font-size:16px;
+cursor:pointer;
+border-radius:5px;
+}
+
+button:hover{
+background:#ff4e2a;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h2>PhotoRate Login</h2>
+
+<input type="email" id="email" placeholder="Enter Email">
+<input type="password" id="password" placeholder="Enter Password">
+
+<button onclick="loginUser()">Login</button>
+
+</div>
+
+<script>
+
+function loginUser(){
+
+let email=document.getElementById("email").value;
+let pass=document.getElementById("password").value;
+
+if(email=="" || pass==""){
+alert("Please enter email and password");
+}
+else{
+localStorage.setItem("userEmail",email);
+window.location.href="index.html";
+}
+
+}
+
+</script>
+
+</body>
+</html>
